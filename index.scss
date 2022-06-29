@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+//variables
+$title_color: #012B34;
+$spoiler_color: #000402;
+$lane_color: #E6E6E6;
+$active_text_color: #02818A;
+
+$bp_1440: 1441px;
+$bp_1280: 1281px;
+$bp_768: 769px;
+$bp_375: 376px;
+
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  min-width: 375px;
+  width: 100vw;
+}
+
+.content {
+  flex: 1 1 100%;
+  margin-top: 50px;
+  margin-top: 100px;
+  padding: 0 160px;
+
+  @media (max-width:$bp_1440) {
+    padding: 0 120px;
+    margin-top: 80px;
+  }
+  @media (max-width:$bp_1280) {
+    padding: 0 107px;
+    margin-top: 70px;
+  }
+  @media (max-width:$bp_768) {
+    padding: 0 40px;
+    margin-top: 60px;
+  }
+  @media (max-width:$bp_375) {
+    padding: 0 24px;
+    margin-top: 50px;
+  }
+
+  &__title {
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    color: $title_color;
+
+    @media (max-width:$bp_1440) {
+      font-size: 48px;
+    }
+    @media (max-width:$bp_1280) {
+      font-size: 42px;
+    }
+    @media (max-width:$bp_375) {
+      font-size: 30px;
+      max-width: 190px;
+    }
+  }
+
+  &__list-wrapper {
+    margin-top: 80px;
+
+    @media (max-width:$bp_1440) {
+      margin-top: 60px;
+    }
+    @media (max-width:$bp_1280) {
+      margin-top: 56px;
+    }
+    @media (max-width:$bp_768) {
+      margin-top: 50px;
+    }
+    @media (max-width:$bp_375) {
+      margin-top: 40px;
+    }
+  }
+}
+
+.list {
+
+  &__item {
+    position: relative;
+    list-style: none;
+    border-top: 1px solid $lane_color;
+
+    &:hover {
+      cursor: pointer;
+    }
+    
+    &:last-child {
+      border-bottom: 1px solid $lane_color;
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 120%;
+    color: $title_color;
+    max-width: 90%;
+    padding: 30px 0;
+
+    @media (max-width:$bp_1440) {
+      font-size: 27px;
+      padding: 24px 0;
+    }
+    @media (max-width:$bp_1280) {
+      font-size: 24px;
+      padding: 20px 0;
+    }
+    @media (max-width:$bp_768) {
+      font-size: 27px;
+      padding: 24px 0;
+    }
+    @media (max-width:$bp_375) {
+      font-size: 24px;
+      padding: 20px 0;
+    }
+
+    &--open {
+      color: $active_text_color;
+    }
+  }
+
+  &__spoiler {
+    word-wrap: break-word;
+    width: 90%;
+    max-width: 942px;
+    padding-bottom: 39px;
+
+    @media (max-width:$bp_1440) {
+      margin-top: -2px;
+      padding-bottom: 26px;
+      max-width: 840px;
+    }
+    @media (max-width:$bp_1280) {
+      margin-top: -6px;
+      max-width: 640px;
+      padding-bottom: 25px;
+
+    }
+    @media (max-width:$bp_768) {
+      max-width: 612px;
+      padding-bottom: 20px;
+    }
+    @media (max-width:$bp_375) {
+      margin-top: -4px;
+      max-width: 327px;
+    }
+
+    &:nth-child(n) {
+      width: 100%;
+      font-size: 20px;
+      line-height: 150%;
+      color: $spoiler_color;
+      opacity: 0.8;
+
+      @media (max-width:$bp_1440) {
+        font-size: 15px;
+      }
+      @media (max-width:$bp_1280) {
+        font-size: 14px;
+      }
+      @media (max-width:$bp_768) {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__state {
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    width: 25px;
+    height: 25px;
+    background-image: url(./img/close_icon.svg);
+    background-position: center;
+
+    @media (max-width:$bp_1440) {
+      width: 20px;
+      height: 20px;
+    }
+    @media (max-width:$bp_1280) {
+      top: 22px;
+      width: 18px;
+      height: 18px;
+    }
+    @media (max-width:$bp_768) {
+      top: 30px;
+    }
+    @media (max-width:$bp_375) {
+      top: 25px;
+    }
+
+    &--open {
+      width: 20px;
+      height: 20px;
+      background-image: url(./img/open_icon.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    
+      @media (max-width:$bp_1440) {
+        right: 0px;
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+}
+

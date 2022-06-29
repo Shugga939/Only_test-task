@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.wrapper {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 375px;
+  width: 100vw;
+}
+
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  margin-top: 50px;
+  margin-top: 100px;
+  padding: 0 160px;
+}
+
+@media (max-width: 1441px) {
+  .content {
+    padding: 0 120px;
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 1281px) {
+  .content {
+    padding: 0 107px;
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 769px) {
+  .content {
+    padding: 0 40px;
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 376px) {
+  .content {
+    padding: 0 24px;
+    margin-top: 50px;
+  }
+}
+
+.content__title {
+  font-size: 64px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  color: #012B34;
+}
+
+@media (max-width: 1441px) {
+  .content__title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 1281px) {
+  .content__title {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 376px) {
+  .content__title {
+    font-size: 30px;
+    max-width: 190px;
+  }
+}
+
+.content__list-wrapper {
+  margin-top: 80px;
+}
+
+@media (max-width: 1441px) {
+  .content__list-wrapper {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 1281px) {
+  .content__list-wrapper {
+    margin-top: 56px;
+  }
+}
+
+@media (max-width: 769px) {
+  .content__list-wrapper {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 376px) {
+  .content__list-wrapper {
+    margin-top: 40px;
+  }
+}
+
+.list__item {
+  position: relative;
+  list-style: none;
+  border-top: 1px solid #E6E6E6;
+}
+
+.list__item:hover {
+  cursor: pointer;
+}
+
+.list__item:last-child {
+  border-bottom: 1px solid #E6E6E6;
+}
+
+.list__title {
+  font-size: 36px;
+  line-height: 120%;
+  color: #012B34;
+  max-width: 90%;
+  padding: 30px 0;
+}
+
+@media (max-width: 1441px) {
+  .list__title {
+    font-size: 27px;
+    padding: 24px 0;
+  }
+}
+
+@media (max-width: 1281px) {
+  .list__title {
+    font-size: 24px;
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 769px) {
+  .list__title {
+    font-size: 27px;
+    padding: 24px 0;
+  }
+}
+
+@media (max-width: 376px) {
+  .list__title {
+    font-size: 24px;
+    padding: 20px 0;
+  }
+}
+
+.list__title--open {
+  color: #02818A;
+}
+
+.list__spoiler {
+  word-wrap: break-word;
+  width: 90%;
+  max-width: 942px;
+  padding-bottom: 39px;
+}
+
+@media (max-width: 1441px) {
+  .list__spoiler {
+    margin-top: -2px;
+    padding-bottom: 26px;
+    max-width: 840px;
+  }
+}
+
+@media (max-width: 1281px) {
+  .list__spoiler {
+    margin-top: -6px;
+    max-width: 640px;
+    padding-bottom: 25px;
+  }
+}
+
+@media (max-width: 769px) {
+  .list__spoiler {
+    max-width: 612px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 376px) {
+  .list__spoiler {
+    margin-top: -4px;
+    max-width: 327px;
+  }
+}
+
+.list__spoiler:nth-child(n) {
+  width: 100%;
+  font-size: 20px;
+  line-height: 150%;
+  color: #000402;
+  opacity: 0.8;
+}
+
+@media (max-width: 1441px) {
+  .list__spoiler:nth-child(n) {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1281px) {
+  .list__spoiler:nth-child(n) {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 769px) {
+  .list__spoiler:nth-child(n) {
+    font-size: 15px;
+  }
+}
+
+.list__state {
+  position: absolute;
+  top: 30px;
+  right: 0px;
+  width: 25px;
+  height: 25px;
+  background-image: url(./img/close_icon.svg);
+  background-position: center;
+}
+
+@media (max-width: 1441px) {
+  .list__state {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 1281px) {
+  .list__state {
+    top: 22px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 769px) {
+  .list__state {
+    top: 30px;
+  }
+}
+
+@media (max-width: 376px) {
+  .list__state {
+    top: 25px;
+  }
+}
+
+.list__state--open {
+  width: 20px;
+  height: 20px;
+  background-image: url(./img/open_icon.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 1441px) {
+  .list__state--open {
+    right: 0px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.list .hide {
+  display: none;
+}
+/*# sourceMappingURL=index.css.map */
