@@ -1,6 +1,6 @@
 let list = document.querySelector('.list')
 
-document.addEventListener('click', (e)=> {
+list.addEventListener('click', (e)=> {
   let currentItem = e.target.closest('.list__item')
   let title = currentItem.querySelector('.list__title')
   let spoiler = currentItem.querySelector('.list__spoiler')
